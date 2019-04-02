@@ -135,7 +135,7 @@ TEE_EXPORT
 
 //------------------------------------------------------------------------------
 // Function: TEE_SendAdminCmdPkg
-//		  This interface send an admin command package to a specific SD session.
+//		  This interface sends an admin command package to a specific SD session.
 // IN		: sdHandle - The SD session handle.
 // IN		: cmdPkg - a buffer containing the ACP.
 // IN		: cmdPkgSize - The package size.
@@ -150,7 +150,7 @@ TEE_EXPORT
 
 //------------------------------------------------------------------------------
 // Function: TEE_ListInstalledTAs
-//		  This interface send an admin command package to a specific SD session.
+//		  This interface lists the installed TAs.
 // IN		: sdHandle - The SD session handle.
 // OUT		: uuidList - The structure containing the UUIDs as a string representations without the '-' delimeters..
 //				The user should pass a reference to an existing struct and the library will fill it.
@@ -165,7 +165,7 @@ TEE_EXPORT
 
 //------------------------------------------------------------------------------
 // Function: TEE_ListInstalledSDs
-//		  This interface send an admin command package to a specific SD session.
+//		  This interface lists the installed SDs.
 // IN		: sdHandle - The SD session handle.
 // OUT		: uuidList - The structure containing the UUIDs as a string representations without the '-' delimeters..
 //				The user should pass a reference to an existing struct and the library will fill it.
@@ -212,9 +212,9 @@ TEE_EXPORT
 // IN		: sdHandle - The SD session handle. Currently not used.
 // OUT		: metadata - A struct that will hold the result
 // RETURN	: TEE_STATUS_SUCCESS - Success.
-//			  TEE_STATUS_SD_INTERFACE_DISABLED – DAL OEM Signing is not enabled on the platform.
-//			  TEE_STATUS_MAX_INVOCATIONS – The command has been invoked more than allowed by throttling.
-//			  TEE_STATUS_COUNTER_MISMATCH – The command has an obsolete counter value.
+//			  TEE_STATUS_SD_INTERFACE_DISABLED Â– DAL OEM Signing is not enabled on the platform.
+//			  TEE_STATUS_MAX_INVOCATIONS Â– The command has been invoked more than allowed by throttling.
+//			  TEE_STATUS_COUNTER_MISMATCH Â– The command has an obsolete counter value.
 //			  TEE_STATUS_SIGNATURE_VERIFY_FAILED - The command signature is incorrect.
 //			  TEE_STATUS_OMK_NOT_PROVISIONED - Need to call TEE_ProvisionOemMasterKey first.
 //			  TEE_STATUS_TA_ENCRYPTION_KEY_INVALID - Wrong key structure/encryption. Key rejected by the FW.
